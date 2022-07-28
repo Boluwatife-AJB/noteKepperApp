@@ -1,9 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode {
+  background: linear-gradient(135deg, #221f28 0%, #222831 100%);
+}
+
+.dark-mode h1 {
+  color: #eeeeee;
+}
+
+.dark-mode .search,
+.dark-mode .search input {
+  background: #eee;
+}
+
+.dark-mode textarea {
+  background-color: #116972;
+  color: #eee;
+}
+
+.dark-mode .save:hover {
+  color: #fff;
+}
+
 .container {
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  min-height: 100vh;
 }
 
 .notes-list {
@@ -13,13 +42,17 @@
 }
 
 .note.new {
-  background-color: #67d7cc;
+  backdrop-filter: blur(11px) saturate(100%);
+  -webkit-backdrop-filter: blur(11px) saturate(100%);
+  background-color: rgba(0, 173, 181, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 textarea {
   border: none;
   resize: none;
-  background-color: #67d7cc;
+  background-color: #74c9c7;
+  color: #232323;
   font-family: inherit;
   font-size: 14px;
 }
@@ -36,12 +69,16 @@ textarea:focus {
 }
 
 .save:hover {
-  background-color: #ededed;
+  background-color: #222831;
   cursor: pointer;
 }
 
 .note {
-  background-color: #fef68a;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(57, 62, 70, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: #eeeeee;
   white-space: pre-wrap;
   border-radius: 10px;
   padding: 1rem;
@@ -62,14 +99,17 @@ textarea:focus {
 }
 
 .delete-icon:hover {
-  color: red;
+  color: #222831;
 }
 
 .search {
   display: flex;
   align-items: center;
-  background-color: rgb(233, 233, 233);
-  border-radius: 10px;
+  backdrop-filter: blur(4px) saturate(92%);
+  -webkit-backdrop-filter: blur(4px) saturate(92%);
+  background-color: rgba(34, 40, 49, 0.23);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 5px;
   margin-bottom: 1.5em;
 }
@@ -78,7 +118,10 @@ textarea:focus {
   font-family: inherit;
   font-size: inherit;
   border: none;
-  background-color: rgb(233, 233, 233);
+  /* backdrop-filter: blur(4px) saturate(92%); */
+  /* -webkit-backdrop-filter: blur(4px) saturate(92%); */
+  background-color: #bdbcb9;
+  /* border: 1px solid rgba(255, 255, 255, 0.125); */
 }
 
 .search input:focus {

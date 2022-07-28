@@ -1,4 +1,5 @@
-import { MdDeleteForever } from 'react-icons/md';
+// import { MdDeleteForever } from 'react-icons/md';
+import { FaTrash } from 'react-icons/fa';
 
 const Note = ({ id, text, time, date, handleDeleteNote }) => {
   return (
@@ -9,7 +10,12 @@ const Note = ({ id, text, time, date, handleDeleteNote }) => {
           {date} | {time}
         </small>
 
-        <MdDeleteForever
+        {/* <MdDeleteForever
+          className="delete-icon"
+          size="1.3em"
+          onClick={() => handleDeleteNote(id)}
+        /> */}
+        <FaTrash
           className="delete-icon"
           size="1.3em"
           onClick={() => handleDeleteNote(id)}
